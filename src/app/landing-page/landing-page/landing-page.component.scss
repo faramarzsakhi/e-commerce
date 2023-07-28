@@ -1,0 +1,125 @@
+.carousel{
+    margin:0 auto;
+   
+}
+.featured{
+    text-align: center;
+    margin-top: 120px;
+   h1{
+    font-weight: 700 !important;
+   }
+   .feature-items{
+    margin-top: 20px !important; 
+   
+   }
+   .item-bg{
+    background-color: #f8fbff;
+    padding: 10px !important;
+   }
+}
+.onSale-container{
+    background-color: rgb(236,253,255) !important;
+    padding: 100px 30px !important;
+    margin-bottom: 100px;
+    .onSale-title{
+        display: flex;
+        flex-direction: column;
+        h1{
+            font-weight: 700 !important;
+        font-weight: 4em !important;
+        
+        }
+        .book-input{
+            margin-top:30px;
+            display: flex;
+            input{
+                width: 300px;
+                border:none;
+                border-radius: 6px;
+                padding:20px;
+            }
+            button{
+                padding: 10px 20px;
+                border:none;
+                border-radius: 0 7px 7px 0;
+                background-color: #FF2E44;
+                color:white;
+                font-size: 14px;
+                font-weight: 500;
+                transition: all .4s ease-in-out;
+                &:hover{
+                    background-image: linear-gradient(16deg, #ff005a 0%, #ff5d2d 64%, #ffba00 100%);
+                    box-shadow: -1.717px 8.835px 29.76px 2.24px rgba(255, 51, 104, 0.18);
+                    background-size: 200% auto;
+                    transition: all .4s ease-in-out;
+                    text-align: center;
+                }
+                
+            }
+
+        }
+    }
+}
+.best-sellers{
+    margin-top: 200px !important;
+    }
+
+
+
+.subscribe_area {
+    background-image: url("/assets/img/subscribe_area.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    h5{
+        text-transform: uppercase;
+        color:#ff005a;
+    }
+    h2{
+        font-weight: 700;
+        margin-bottom: 50px;
+    }
+    .input-group{
+        input{
+            padding:20px;
+            font-size: 1.3em;
+        }
+        .input-group-append{
+            a{
+                padding:20px;
+                text-decoration: none;
+                background-color: #FF2E44;
+                color:white;
+                font-size: 1.3em;
+                transition: all .4s ease-in-out;
+                &:hover{
+                    transition: all .4s ease-in-out;
+                    background-size: 200% auto;
+                    box-shadow: -1.717px 8.835px 29.76px 2.24px rgba(255, 51, 104, 0.18);
+                    background-image: linear-gradient(16deg, #ff005a 0%, #ff5d2d 64%, #ffba00 100%);
+                }
+            }
+        }
+    }
+}
+
+
+.section_padding {
+    @media only screen and (min-width: 768px) and (max-width: 991px){
+        padding: 70px 0px;
+    }
+    padding: 140px 0px;
+}
+
+
+
+// client logo styles
+.single_client_logo{
+    text-align: center;
+    border-left: 1px solid #edeff2;
+    border-bottom: 1px solid #edeff2;
+}
+.padding_top{
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+}

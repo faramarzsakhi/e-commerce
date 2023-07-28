@@ -1,0 +1,116 @@
+.container {
+  margin-top: 50px;
+  width: 100% !important;
+  @media (min-width: 768px) {
+    width: 75% !important;
+  }
+  .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    column-gap: 20px;
+    margin: 10px;
+    h1 {
+      font-weight: 700;
+    }
+    span {
+      font-weight: 700;
+      color: rgb(174, 174, 174);
+      font-size: 2em;
+      margin-left: 30px;
+    }
+    .arrows {
+      margin-left: auto;
+
+      span {
+        color: black;
+        font-weight: bold;
+        font-size: 1.3em;
+        width: 40px !important;
+        height: 10px !important;
+        margin: 0px;
+        padding: 0px 10px;
+      }
+      .prev {
+        border-left: 2px solid black;
+      }
+    }
+  }
+  .scrollable-row::-webkit-scrollbar{
+    display: none !important;
+  }
+  .scrollable-row {
+    column-gap: 10px;
+    list-style: none;
+    -ms-overflow-style: none !important;  /* Internet Explorer 10+ */
+    scrollbar-width: none !important;  /* Firefox */
+    overflow-y: hidden !important;
+    white-space: nowrap;
+    
+    scroll-behavior: smooth;
+    transition: 300ms;
+
+
+    div.item {
+      width: 50%;
+      padding: 0px;
+      margin-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      display: inline-block;
+      transition: 300ms;
+      overflow: hidden;
+      @media (min-width: 768px) {
+        width: 25%;
+      }
+      img {
+        width: 100%;
+      }
+      &:hover{
+        transition: 300ms;
+        box-shadow: 5px 5px 10px 3px rgba(0,0,0,0.26);
+        .details{
+            .hover-container{
+                visibility: visible;
+                transition: 300ms;
+                i{
+                    transform: translateX(0);
+                    transition: 300ms ease-in-out;
+                }
+                button{
+                    transform: translateX(0);
+                    transition: 300ms ease-in-out;
+                }
+            }
+        }
+        
+      }
+      .details {
+        padding: 20px;
+        .hover-container {
+          margin-top: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+            visibility: hidden; 
+            
+          button {
+            border: none;
+            padding: 5px 10px;
+            color: rgb(255, 84, 112);
+            background: transparent;
+            font-weight: 700;
+            font-size: 1.1em;
+            transform: translateX(-100px);
+            transition: 300ms ease-in-out;
+          }
+          i{
+            transform: translateX(100px);
+            transition: 300ms ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}

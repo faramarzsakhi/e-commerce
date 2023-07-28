@@ -1,0 +1,32 @@
+$lightGray:#F9F9FE;
+.bg-light-gray{
+    background-color: $lightGray !important;
+}
+.subscribe-btn{
+    background-color: rgb(255,51,104);
+    border:none;
+    padding: 5px 20px;
+    font-size: medium;
+    border-radius: 6px;
+    color: white;
+    text-align: center;
+
+}
+.contact-icons{
+    background: transparent;
+    transition: 200ms;
+    i{
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        cursor: pointer;
+        &:hover{
+            transition:200ms;
+            background:rgb(210, 210, 210);
+        }
+    }
+}

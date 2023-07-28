@@ -1,0 +1,32 @@
+<div class="container d-flex  flex-column ">
+    <!-- title -->
+    <div class="title">
+        <h1><ng-content select="[mainTitle]"></ng-content></h1>
+       <span> <ng-content select="[subTitle]"></ng-content></span>
+        <div class="arrows">
+            <span class="" (click)="scrollLeft(list)" role="button">next</span>
+            <span class="prev" (click)="scrollRight(list)" role="button">previous</span>
+        </div>
+    </div>
+
+    <!-- scrollable -->
+    <div class="scrollable-row w-100" #list>
+        <div class="item" *ngFor="let item of items">
+            <img [src]="item" alt="chair" class="img-fluid">
+            <div class="details">
+                <h3>Lorem ipsum</h3>
+                <span>$150.00</span>
+                <div class="hover-container">
+                    <button type="button">+ ADD TO CART</button>
+                    <i class="bi bi-heart"></i>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+</div>

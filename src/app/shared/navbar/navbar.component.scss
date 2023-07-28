@@ -1,0 +1,45 @@
+.Logo {
+  text-decoration: none;
+  color: black;
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 2rem;
+  cursor: pointer;
+  margin: 5px 10px;
+}
+.navbar {
+  transition: 300ms;
+  background: rgb(236,253,255)!important; 
+  margin-bottom: 0 !important;
+}
+.nav-item {
+    margin:0 10px;
+  a {
+    color: black !important;
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+  &:after {
+    display: block;
+    content: "";
+    border-bottom: solid 3px #019fb6;
+    transform: scaleX(0);
+    transform-origin:100% 50%;
+    transition: transform 250ms ease-in-out;
+  }
+  &:hover:after { transform: scaleX(1); }
+
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .offcanvas {
+    flex-grow: 0 !important;
+    transition: 400ms;
+  }
+}
+@media (max-width: 991px) {
+  .nav-item {
+    margin-bottom: 10px !important;
+    transition: 400ms;
+  }
+}

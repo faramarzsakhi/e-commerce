@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LandingPageComponent } from './landing-page/landing-page/landing-page.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path:"home" , component:LandingPageComponent},
+  {path:"" , redirectTo:"home", pathMatch:"full"}
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes ,{ useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
