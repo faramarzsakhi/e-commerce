@@ -24,9 +24,10 @@
     .onSale-title{
         display: flex;
         flex-direction: column;
+        align-items: center;
         h1{
             font-weight: 700 !important;
-        font-weight: 4em !important;
+            font-weight: 4em !important;
         
         }
         .book-input{
@@ -79,12 +80,12 @@
         font-weight: 700;
         margin-bottom: 50px;
     }
-    .input-group{
+    .input-groupT{
         input{
             padding:20px;
             font-size: 1.3em;
         }
-        .input-group-append{
+        .input-group-appendT{
             a{
                 padding:20px;
                 text-decoration: none;

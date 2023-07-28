@@ -1,8 +1,11 @@
-<div class="container d-flex  flex-column ">
+<div class="container d-flex  flex-column overflow-hidden ">
     <!-- title -->
     <div class="title">
-        <h1><ng-content select="[mainTitle]"></ng-content></h1>
-       <span> <ng-content select="[subTitle]"></ng-content></span>
+        <div class="d-flex flex-column flex-md-row title-text">
+            <h1 class="me-md-3"><ng-content select="[mainTitle]" class=""></ng-content></h1>
+            <span> <ng-content select="[subTitle]"></ng-content></span>
+        </div>
+        
         <div class="arrows">
             <span class="" (click)="scrollLeft(list)" role="button">next</span>
             <span class="prev" (click)="scrollRight(list)" role="button">previous</span>
