@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { LandingPageModule } from './landing-page/landing-page.module';
+import { FeaturesModule } from './features/features.module';
+import { ShopModule } from './features/shop/shop.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,9 @@ import { LandingPageModule } from './landing-page/landing-page.module';
     AppRoutingModule,
     SharedModule,
     LandingPageModule,
+    FeaturesModule,
+    ShopModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

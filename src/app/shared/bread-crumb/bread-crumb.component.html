@@ -1,0 +1,14 @@
+<div class="w-100 p-5 d-flex flex-column flex-md-row main-container">
+    <div class="container  d-flex flex-column flex-md-row align-items-center justify-content-evenly ">
+        
+        <nav aria-label="breadcrumb d-flex flex-column">
+            <h1 class="fw-bold">{{bread}}</h1>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item " [ngClass]="{'active': bread == 'home'}" aria-current="page">Home</li>
+              <li class="breadcrumb-item "[ngClass]="{'active': bread !== 'home'}" *ngIf="bread !== 'home'"aria-current="page">{{bread}}</li>
+            </ol>
+            
+          </nav>
+        <img src="assets/img/feature/feature_1.png"  class="img-fluid" alt="breadCrumb banner_img">
+    </div>
+</div>
