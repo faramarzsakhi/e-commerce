@@ -1,2 +1,109 @@
 <app-bread-crumb></app-bread-crumb>
-<p>shop works!</p>
+<div class="container my-5">
+    <div class="row px-5">
+        <!-- FILTER SECTION -->
+        <div class="flex-shrink-0 p-3 bg-white col-12 col-md-4 col-lg-3">
+            <div class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                <span class="fs-5 fw-semibold">Browse catgories</span>
+            </div>
+            <ul class="list-unstyled ps-0 ">
+                <li class="my-3 mb-1 w-100 d-flex algin-items-center" role="button" >
+                    <div class="text-black-50">tables</div> <div class="ms-auto">(250)</div>
+                </li>
+                <li class="my-3 mb-1 w-100 d-flex algin-items-center" role="button">
+                    <div class="text-black-50">chairs</div> <div class="ms-auto">(250)</div>
+                </li>
+                <li class="my-3 mb-1 w-100 d-flex algin-items-center" role="button">
+                    <div class="text-black-50">closets</div> <div class="ms-auto">(250)</div>
+                </li>
+                <li class="my-3 mb-1 w-100 d-flex algin-items-center" role="button">
+                    <div class="text-black-50">oak chairs</div> <div class="ms-auto">(250)</div>
+                </li>
+                <li class="my-3 mb-1 w-100 d-flex algin-items-center" role="button">
+                    <div class="text-black-50">tables</div> <div class="ms-auto">(250)</div>
+                </li>
+                <li class="my-3 mb-1 w-100 d-flex algin-items-center" role="button">
+                    <div class="text-black-50">tables</div> <div class="ms-auto">(250)</div>
+                </li>
+            </ul>
+            
+            <div class="d-flex align-items-center pb-3 mt-5 mb-2 link-dark text-decoration-none border-bottom">
+                <span class="fs-5 fw-semibold">By brand</span>
+            </div>
+            <ul class="list-unstyled ps-0">
+                <li class="my-3 mb-1 w-100 d-flex algin-items-center" role="button" >
+                    <div class="text-black-50">climax</div> <i class="ms-auto text-black-50  bi bi-flower1"></i>
+                </li>
+                <li class="my-3 mb-1 w-100 d-flex algin-items-center" role="button" >
+                    <div class="text-black-50">climax</div> <i class="ms-auto text-black-50  bi bi-flower2"></i>
+                </li>
+                <li class="my-3 mb-1 w-100 d-flex algin-items-center" role="button" >
+                    <div class="text-black-50">climax</div> <i class="ms-auto text-black-50  bi bi-stack-overflow"></i>
+                </li>
+                <li class="my-3 mb-1 w-100 d-flex algin-items-center" role="button" >
+                    <div class="text-black-50">climax</div> <i class="ms-auto text-black-50  bi bi-dice-1"></i>
+                </li>
+                <li class="my-3 mb-1 w-100 d-flex algin-items-center" role="button" >
+                    <div class="text-black-50">climax</div> <i class="ms-auto text-black-50  bi bi-diamond"></i>
+                </li>
+               
+            </ul>
+            
+            <div class="d-flex align-items-center pb-3 mt-5 mb-2 link-dark text-decoration-none border-bottom">
+                <span class="fs-5 fw-semibold">Color filter</span>
+            </div>
+            <ul class="list-unstyled ps-0">
+                <li class="my-3 mb-1 w-100 d-flex algin-items-center" role="button" >
+                    <div class="text-black-50">black</div> 
+                </li>
+                <li class="my-3 mb-1 w-100 d-flex algin-items-center" role="button" >
+                    <div class="text-black-50">black leather</div> 
+                </li>
+                <li class="my-3 mb-1 w-100 d-flex algin-items-center" role="button" >
+                    <div class="text-black-50">black with red</div> 
+                </li>
+                <li class="my-3 mb-1 w-100 d-flex algin-items-center" role="button" >
+                    <div class="text-black-50">gold</div> 
+                </li>
+                <li class="my-3 mb-1 w-100 d-flex algin-items-center" role="button" >
+                    <div class="text-black-50">sky blue</div> 
+                </li>
+
+            </ul>
+        
+            <div class="d-flex align-items-center pb-3 mt-5 mb-2 link-dark text-decoration-none border-bottom">
+                <span class="fs-5 fw-semibold">Price range</span>
+            </div>
+            <mat-slider min="0" max="10000" step="10" class="w-100">
+                <input value="0" matSliderStartThumb [(ngModel)]="minPrice">
+                <input value="10000" matSliderEndThumb [(ngModel)]="maxPrice">
+              </mat-slider>
+              <span class="text-black-50">Price: from
+                <span class="fw-bold"> ${{minPrice}}</span>
+                <span class="text-black-50"> to</span>
+                <span class="fw-bold"> ${{maxPrice}}</span>
+              </span>
+
+
+
+
+
+        </div>
+
+
+        <!-- Products section -->
+        <section class="col-12 col-md-8 col-lg-9">
+            <div class="item" *ngFor="let item of imagesArray">
+                <img [src]="item" alt="chair" class="img-fluid">
+                <div class="details">
+                    <h3>Lorem ipsum</h3>
+                    <span>$150.00</span>
+                    <div class="hover-container">
+                        <button type="button">+ ADD TO CART</button>
+                        <i class="bi bi-heart"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

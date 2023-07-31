@@ -7,6 +7,7 @@ import { SharedModule } from './shared/shared.module';
 import { LandingPageModule } from './landing-page/landing-page.module';
 import { FeaturesModule } from './features/features.module';
 import { ShopModule } from './features/shop/shop.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ShopModule } from './features/shop/shop.module';
     LandingPageModule,
     FeaturesModule,
     ShopModule,
+    BrowserAnimationsModule,
     
   ],
   providers: [],

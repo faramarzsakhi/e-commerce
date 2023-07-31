@@ -1,0 +1,60 @@
+div.item {
+    width: 50%;
+    padding: 0px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    display: inline-block;
+    transition: 400ms;
+    overflow: hidden;
+    @media (min-width: 768px) {
+      width: 25%;
+    }
+    img {
+      width: 100%;
+    }
+    &:hover{
+      transition: 400ms;
+      box-shadow: 5px 5px 10px 3px rgba(0,0,0,0.26);
+      .details{
+          .hover-container{
+              visibility: visible;
+              transition: 400ms;
+              i{
+                  transform: translateX(0);
+                  transition: 400ms ease-in-out;
+              }
+              button{
+                  transform: translateX(0);
+                  transition: 400ms ease-in-out;
+              }
+          }
+      }
+      
+    }
+    .details {
+      padding: 20px;
+      .hover-container {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+          visibility: hidden; 
+          
+        button {
+          border: none;
+          padding: 5px 10px;
+          color: rgb(255, 84, 112);
+          background: transparent;
+          font-weight: 700;
+          font-size: 1.1em;
+          transform: translateX(-100px);
+          transition: 400ms ease-out;
+        }
+        i{
+          transform: translateX(100px);
+          transition: 400ms ease-out;
+        }
+      }
+    }
+  }
