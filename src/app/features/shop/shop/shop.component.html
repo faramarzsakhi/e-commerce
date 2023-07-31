@@ -1,8 +1,8 @@
 <app-bread-crumb></app-bread-crumb>
 <div class="container my-5">
     <div class="row px-5">
-        <!-- FILTER SECTION -->
-        <div class="flex-shrink-0 p-3 bg-white col-12 col-md-4 col-lg-3">
+       
+        <div class="flex-shrink-0 p-3 bg-white col-12 col-md-4 col-lg-3"> <!-- FILTER SECTION -->
             <div class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
                 <span class="fs-5 fw-semibold">Browse catgories</span>
             </div>
@@ -91,9 +91,9 @@
         </div>
 
 
-        <!-- Products section -->
-        <section class="col-12 col-md-8 col-lg-9">
-            <div class="item" *ngFor="let item of imagesArray">
+        
+        <section class="col-12 col-md-8 col-lg-9 row px-3"><!-- Products section -->
+            <div class="item col-12 col-md-6 col-lg-3 p-2" *ngFor="let item of imagesArray">
                 <img [src]="item" alt="chair" class="img-fluid">
                 <div class="details">
                     <h3>Lorem ipsum</h3>

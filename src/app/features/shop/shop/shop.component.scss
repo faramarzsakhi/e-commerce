@@ -1,15 +1,11 @@
 div.item {
-    width: 50%;
     padding: 0px;
-    margin-bottom: 50px;
+    margin-bottom:10px;
     display: flex;
     flex-direction: column;
-    display: inline-block;
     transition: 400ms;
     overflow: hidden;
-    @media (min-width: 768px) {
-      width: 25%;
-    }
+   
     img {
       width: 100%;
     }
