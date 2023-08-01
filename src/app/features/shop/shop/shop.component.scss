@@ -54,3 +54,25 @@ div.item {
       }
     }
   }
+  .active{
+    transition: 100ms;
+    box-shadow: 5px 5px 10px 3px rgba(0,0,0,0.26);
+    .details{
+        .hover-container{
+            visibility: visible !important;
+            transition: 200ms !important;
+      
+            i{
+                transform: translateX(0) !important;
+                transition: 300ms ease-in-out !important;
+          
+            }
+            button{
+                transform: translateX(0) !important;
+                transition: 300ms ease-in-out !important;
+          
+            }
+        }
+    }
+    
+  }
