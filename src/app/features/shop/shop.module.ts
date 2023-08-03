@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { ProductComponent } from './product/product.component';
 import { RouterModule } from '@angular/router';
 import { ImageGalleryComponent } from './image-gallery/image-gallery.component';
+import { CommentsSectionComponent } from './comments-section/comments-section.component';
 
 
 
@@ -16,6 +17,7 @@ import { ImageGalleryComponent } from './image-gallery/image-gallery.component';
         ShopComponent,
         ProductComponent,
         ImageGalleryComponent,
+        CommentsSectionComponent,
     ],
     imports: [
         CommonModule,

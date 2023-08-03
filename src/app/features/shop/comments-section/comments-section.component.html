@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-12 col-md-6">
+
+    </div>
+    <div class="col-12 col-md-6 d-flex flex-column order-1 order-md-2">
+        <h1 class="fw-bolder fs-3">Add a Review</h1>
+        <div class="rating">
+
+            <div class="d-flex flex-row gap-2">
+                <span class="me-3">Your Rating:</span>
+                <!-- review  stars -->
+                <div class="stars-container">
+                    <div class="stars_empty">
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                    </div>
+                    <div class="stars-filled" #stars >
+                        <i class="bi bi-star-fill opacity-0" (click)="giveStar(1)"></i>
+                        <i class="bi bi-star-fill opacity-0" (click)="giveStar(2)"></i>
+                        <i class="bi bi-star-fill opacity-0" (click)="giveStar(3)"></i>
+                        <i class="bi bi-star-fill opacity-0" (click)="giveStar(4)"></i>
+                        <i class="bi bi-star-fill opacity-0" (click)="giveStar(5)"></i>
+                    </div>
+                </div>
+            </div>
+            <form (ngSubmit)="onSubmit(reviewForm) "#reviewForm="ngForm" class="mt-5 d-flex flex-column gap-4">
+                <input type="text" name="fullName" #fullName="ngModel" placeholder="Your Full Name" ngModel required>
+                <small class="alert alert-danger" *ngIf="fullName.invalid && fullName.touched">required</small>
+
+                <input type="text" name="emailAdress" #emailAdress="ngModel" placeholder="Email Adress" ngModel required email>
+                <small class="alert alert-danger" *ngIf="emailAdress.invalid && emailAdress.touched">Incorrect Email Adress</small>
+
+                <input type="text" name="phoneNumber" placeholder="Phone Number" ngModel required [pattern]="phoneNumPat" #phoneNumber="ngModel">
+                <small class="alert alert-danger" *ngIf="phoneNumber.invalid && phoneNumber.touched">Incorrect phone number</small>
+
+                <textarea name="review" id="review" cols="30" rows="2" placeholder="Your Review" #review="ngModel" ngModel required minlength="25"></textarea>
+                <small class="alert alert-danger"*ngIf="review.invalid && review.touched" >Minimum 25 characters</small>
+
+                <button type="submit" class="btn_3 w-50 ms-auto" [disabled]="!reviewForm.valid">submit now</button>
+            </form>
+               
+
+                
+        </div>
+    </div>
+
+</div>

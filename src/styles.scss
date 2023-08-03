@@ -16,3 +16,26 @@ body{
   }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.btn_3 {
+  display: inline-block;
+  
+  padding: 9px 30px;
+  border-radius: 50px;
+  background-color: #ff3368;
+  border: 1px solid #ecfdff;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  box-shadow: -1.717px 8.835px 29.76px 2.24px rgba(255, 51, 104, 0.18);
+  border: 1px solid #ff3368;
+  transition: 0.5s;
+  text-decoration: none;
+  &:hover {
+    box-shadow: -1.717px 8.835px 29.76px 2.24px rgba(255, 51, 104, 0.18);
+    border: 1px solid #ff3368;
+    background-color: red;
+    cursor: pointer;
+  }
+}

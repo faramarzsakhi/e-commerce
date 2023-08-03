@@ -39,7 +39,9 @@ export class ProductComponent {
     elem.children[1].classList.add('liked_icon');
 
   }
-   
+   ngAfterViewInit(){
+    // window.scroll(0,600);
+   }
     
 
 }

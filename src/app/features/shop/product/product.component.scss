@@ -87,6 +87,7 @@
     cursor: pointer;
   }
 }
+// like button and animations
 .like_us {
     position: relative;
   i {
@@ -119,8 +120,6 @@
         animation: liked 1000ms;
     }
 }
-   
- 
 @keyframes liked {
   0% {
    transform: translateY(-50%);
@@ -172,4 +171,8 @@
     top:calc(50% - 17px);
     transform: scaleX(0px);
   }
+}   
+ 
+.comments{
+  margin-top:100px;
 }

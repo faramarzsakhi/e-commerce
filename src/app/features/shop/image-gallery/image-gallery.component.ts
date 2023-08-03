@@ -19,7 +19,7 @@ export class ImageGalleryComponent {
     },400)
   }
 
-  ngAfterViewInit(){
+  ngAfterContentInit(){
     this.activeImage=this.imagesArray[0];
   }
 }
