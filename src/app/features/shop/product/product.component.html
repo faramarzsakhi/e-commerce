@@ -1,0 +1,40 @@
+<app-bread-crumb></app-bread-crumb>
+
+<div class="my-20 container">
+    <div class="row mx-2">
+        <!-- product images-->
+        <div class="col-12 col-md-7 col-lg-8">
+           <app-image-gallery [imagesArray]="imagesArray"></app-image-gallery>
+        </div>
+        <!-- product details -->
+        <div class="col-12 col-md-5 col-lg-4 d-flex flex-column aling-items-center gap-2 mt-5 mt-md-0">
+            <h1 class="fw-bolder">Faded SkyBlu Denim Jeans</h1>
+            <span class="product-price">$144.19</span>  <!--  product pricee -->
+            <span>Category: <span class="text-danger fw-bolder ms-5">Household</span>  </span>
+            <span>Availablity: <span class="text-warning fw-bolder ms-5">in stock</span>  </span>
+            <hr class="text-black-50 my-4">
+            <!-- product intro -->
+            <p class="pdetails">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam unde aperiam obcaecati quasi laboriosam dicta id, </p>
+            <hr class="text-black-50 my-4">
+            <!-- buy product -->
+            <div class="card-area d-flex justify-content-between align-items-center gap-2">
+                <div class="product_count">
+                  <span class="inumber-decrement" role="button"(click)="minusCount()" > <i class="bi bi-dash"></i></span>
+                  <input class="input-number" type="text" value="1" min="0" max="100" [(ngModel)]="productCount">
+                  <span class="number-increment" role="button" (click)="addCount()" > <i class="bi bi-plus"></i></span>
+                </div>
+                <a class="btn_3">add to cart</a>
+                <a  class="like_us" #likeContainer (click)="liked(likeContainer)">
+                     <i class="bi bi-heart fs-3 text-dark"#like (mouseover)="likeHover(like)" (mouseout)="likeOut(like)" ></i>
+                     <i class="bi bi-heart-fill visually-hidden"></i>
+                 </a>
+              </div>
+            
+
+            <hr class="text-black-50 my-4">
+        </div>
+    </div>
+
+</div>
+
+     

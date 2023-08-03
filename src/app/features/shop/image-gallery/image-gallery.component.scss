@@ -1,0 +1,32 @@
+.img_thumbs{
+
+    .img_thumb{
+
+        .img-thumbnail{
+            max-width: 120px;
+        }
+    }
+
+}
+.image-container{
+    width: 392px;
+    min-height: 400px;
+ 
+}
+
+.faded{ 
+    animation-name: faded   ;
+    animation-duration: 400ms ;
+} 
+
+
+
+
+@keyframes faded {
+    from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+}

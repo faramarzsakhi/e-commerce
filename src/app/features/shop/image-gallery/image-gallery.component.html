@@ -1,0 +1,11 @@
+
+<div class="d-flex flex-column flex-lg-row gap-2 justify-content-md-evenly align-content-between">
+    <div class="image-container overflow-hidden">
+        <img [src]="activeImage" class="faded" [ngClass]="{'faded': animating}" alt="" class="img-fluid">
+    </div>
+    <div class="img_thumbs d-flex flex-row flex-lg-column flex-wrap ">
+        <div class="img_thumb" *ngFor="let img_thumb of imagesArray; let i = index" >
+            <img [src]="img_thumb" alt="thumbnail" class="img-thumbnail" (click)="onThumbClick(i)">
+        </div>
+    </div>
+</div>

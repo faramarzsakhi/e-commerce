@@ -4,6 +4,9 @@ import { ShopComponent } from './shop/shop.component';
 import { SharedModule } from "../../shared/shared.module";
 import {MatSliderModule} from '@angular/material/slider';
 import { FormsModule } from '@angular/forms';
+import { ProductComponent } from './product/product.component';
+import { RouterModule } from '@angular/router';
+import { ImageGalleryComponent } from './image-gallery/image-gallery.component';
 
 
 
@@ -11,12 +14,15 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
     declarations: [
         ShopComponent,
+        ProductComponent,
+        ImageGalleryComponent,
     ],
     imports: [
         CommonModule,
         SharedModule,
         MatSliderModule,
-        FormsModule
+        FormsModule,
+        RouterModule
     ],
     providers:[
     ]
