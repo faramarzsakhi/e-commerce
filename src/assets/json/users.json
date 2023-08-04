@@ -1,0 +1,23 @@
+[
+    {
+        "id":"u1",
+        "firstName":"ali",
+        "lastName":"hamidi",
+        "profileImage":"assets/img/product/single-product/review-1.png",
+        "age":22
+    },
+    {
+        "id":"u2",
+        "firstName":"ali",
+        "lastName":"hamidi",
+        "profileImage":"assets/img/product/single-product/review-2.png",
+        "age":22
+    },
+    {
+        "id":"u3",
+        "firstName":"ali",
+        "lastName":"hamidi",
+        "profileImage":"assets/img/product/single-product/review-3.png",
+        "age":22
+    }
+]

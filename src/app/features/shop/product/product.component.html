@@ -38,8 +38,53 @@
         </div>
     </div>
 
+    <div class="tabs mt-5">
+        <div>
+            <label class="" for="description">
+                <input type="radio" class="" name="tabs" id="description" value="description" autocomplete="off" checked [(ngModel)]="activeTab">
+                <span>description</span>
+            </label>
+            <label class="" for="specification">
+                <input type="radio" class="" name="tabs" id="specification" value="specification" autocomplete="off" checked [(ngModel)]="activeTab">
+                <span>specification</span>
+            </label>
+            <label class="" for="reviews">
+                <input type="radio" class="" name="tabs" id="reviews" value="reviews" autocomplete="off" checked [(ngModel)]="activeTab">
+                <span>reviews</span>
+            </label>
+        </div>
 
-    <div class="comments">
+
+    </div>
+    <div class="comments" *ngIf="activeTab === 'reviews'">
         <app-comments-section></app-comments-section>
     </div>
+    <div class="description mt-4" *ngIf="activeTab === 'description'">
+        <p class="text-dark lh-lg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo repellat distinctio officia sit quia alias eligendi omnis, quod laudantium itaque dolorem vitae, dolorum sapiente fugit aliquam accusantium recusandae magni iusto deserunt. In expedita omnis id, ipsam perferendis quos nostrum excepturi alias modi sunt sequi, esse cupiditate! Alias, possimus. Dolore veniam quae impedit reprehenderit, nemo, aliquid officia molestias ad consectetur possimus eaque exercitationem vero illum consequuntur incidunt commodi quo placeat corrupti ducimus sed, quam dolorum. Ducimus facere quibusdam error ullam in, illo iure perspiciatis doloribus placeat! Dolorum blanditiis amet explicabo et ad perferendis accusantium quae, placeat optio similique, eaque nesciunt aliquid.</p>
+    </div>
+    <div class="specification mt-5 col-12 col-lg-6 me-auto" *ngIf="activeTab === 'specification'">
+        <div class="mt-4 d-flex flex-column gap-3">
+            <div class="p-2 w-100 border-bottom border-dark-subtle d-flex">
+                <span>width</span>
+                <span class="ms-auto">133mm</span>
+            </div>
+            <div class="p-2 w-100 border-bottom border-dark-subtle d-flex">
+                <span>heigh</span>
+                <span class="ms-auto">223mm</span>
+            </div>
+            <div class="p-2 w-100 border-bottom border-dark-subtle d-flex">
+                <span>Depth</span>
+                <span class="ms-auto">85mm</span>
+            </div>
+            <div class="p-2 w-100 border-bottom border-dark-subtle d-flex">
+                <span>weight</span>
+                <span class="ms-auto">12kg</span>
+            </div>
+            <div class="p-2 w-100 border-bottom border-dark-subtle d-flex">
+                <span>Each Box contains</span>
+                <span class="ms-auto">22pcs</span>
+            </div>
+        </div>
+    </div>
+
 </div>

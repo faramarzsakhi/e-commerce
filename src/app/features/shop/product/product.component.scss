@@ -66,6 +66,7 @@
   }
 }
 .btn_3 {
+
   display: inline-block;
   padding: 9px 30px;
   border-radius: 50px;
@@ -81,12 +82,94 @@
   transition: 0.5s;
   text-decoration: none;
   &:hover {
-    box-shadow: -1.717px 8.835px 29.76px 2.24px rgba(255, 51, 104, 0.18);
     border: 1px solid #ff3368;
     background-color: red;
     cursor: pointer;
   }
 }
+.btn_4{
+  display: inline-block;
+  padding: 9px 30px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  font-size: 15px;
+  font-weight: 700;
+  color: #080808;
+  text-transform: uppercase;
+  font-weight: 400;
+  box-shadow: 0px 0px 10px 2px rgba(255, 51, 104, 0.18);
+  transition: 0.5s;
+  text-decoration: none;
+  &:hover {
+    box-shadow: 0px 10px 10px 2px rgba(156, 156, 156, 0.18);
+    border: 1px solid #000000;
+    background-color: rgb(217, 190, 190);
+    cursor: pointer;
+  }
+}
+
+.tabs{
+  margin-top: 300px !important;
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    justify-content: start;
+
+    column-gap: 20px;
+  }
+  input[type="radio"] {
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+  input[type="radio"]:checked + span {
+     display: inline-block;
+  padding: 9px 30px;
+  border-radius: 50px;
+  background-color: #ff3368;
+  border: 1px solid #ecfdff;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  box-shadow: -1.717px 8.835px 29.76px 2.24px rgba(255, 51, 104, 0.18);
+  border: 1px solid #ff3368;
+  transition: 0.5s;
+  text-decoration: none;
+    z-index: 1;
+  }
+  label span {
+    display: inline-block;
+    padding: 9px 30px;
+    border-radius: 50px;
+    background-color: #ffffff;
+    border: 1px solid #cecece;
+    font-size: 15px;
+    margin: 10px;
+    font-weight: 700;
+    color: #888888;
+    text-transform: uppercase;
+    font-weight: 400;
+    transition: 0.5s;
+    text-decoration: none;
+    &:hover {
+
+      border: 1px solid #000000;
+      background-color: rgb(202, 202, 202);
+      cursor: pointer;
+    }
+  }
+}
+  
+
+
 // like button and animations
 .like_us {
     position: relative;

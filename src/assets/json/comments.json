@@ -1,0 +1,26 @@
+[
+    {
+        "userId":"u1",
+        "fullName":"Ali Karimi",
+        "score":4,
+        "date":"2012-04-23T18:25:43.511Z",
+        "comment":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
+        "profileImage":"assets/img/product/single-product/review-1.png"
+    },
+    {
+        "userId":"u2",
+        "fullName":"Bob Ross",
+        "score":5,
+        "date":"2013-04-23T18:25:43.511Z",
+        "comment":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
+        "profileImage":"assets/img/product/single-product/review-2.png"
+    },
+    {
+        "userId":"u3",
+        "fullName":"Tom Holand",
+        "score":5,
+        "date":"2022-04-23T18:25:43.511Z",
+        "comment":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
+        "profileImage":"assets/img/product/single-product/review-3.png"
+    }
+]

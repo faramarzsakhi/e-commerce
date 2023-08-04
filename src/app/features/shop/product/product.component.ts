@@ -7,6 +7,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 })
 export class ProductComponent {
   productCount:number=0;
+  activeTab:string="description";
  imagesArray:Array<string>=[
     "assets/img/product/single-product/product_1.png",
     "assets/img/product/product_2.png",
@@ -40,7 +41,7 @@ export class ProductComponent {
 
   }
    ngAfterViewInit(){
-    // window.scroll(0,600);
+    window.scroll(0,600);
    }
     
 

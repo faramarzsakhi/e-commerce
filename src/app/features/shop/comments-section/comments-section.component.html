@@ -1,8 +1,91 @@
 <div class="row">
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-6 d-flex flex-column order-2 order-md-1">
+        <!-- review summary -->
+        <div class="d-flex flex-row gap-5">
+            <div class="d-flex flex-column gap-4 bg-info-subtle bg-gradient border px-5 py-4 align-items-center justify-content-center">
+                <span class="fs-3">Overall</span>
+                <span class="text-danger fw-bold fs-1">4.0</span>
+                <span>(03 Reviews)</span>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-start">
+               
+                <span class="fw-bold mt-3">Based on 3 reviews</span>
+                <span>
+                    5 star
+                    <i class="bi bi-star-fill text-warning fs-5"></i><i class="bi bi-star-fill text-warning fs-5"></i><i
+                        class="bi bi-star-fill text-warning fs-5"></i><i
+                        class="bi bi-star-fill text-warning fs-5"></i><i class="bi bi-star-fill text-warning fs-5"></i>
+                    01
+                </span>
+                <span>
+                    4 star
+                    <i class="bi bi-star-fill text-warning fs-5"></i>
+                    <i class="bi bi-star-fill text-warning fs-5"></i>
+                    <i class="bi bi-star-fill text-warning fs-5"></i>
+                    <i class="bi bi-star-fill text-warning fs-5"></i>
+                    <i class="bi bi-star text-warning fs-5"></i>
+                    01
+                </span>
+                <span>
+                    3 star
+                    <i class="bi bi-star-fill text-warning fs-5"></i>
+                    <i class="bi bi-star-fill text-warning fs-5"></i>
+                    <i class="bi bi-star-fill text-warning fs-5"></i>
+                    <i class="bi bi-star text-warning fs-5"></i>
+                    <i class="bi bi-star text-warning fs-5"></i>
+                    01
+                </span>
+                <span>
+                    2 star
+                    <i class="bi bi-star-fill text-warning fs-5"></i>
+                    <i class="bi bi-star-fill text-warning fs-5"></i>
+                    <i class="bi bi-star text-warning fs-5"></i>
+                    <i class="bi bi-star text-warning fs-5"></i>
+                    <i class="bi bi-star text-warning fs-5"></i>
+                    01
+                </span>
+                <span>
+                    1 star
+                    <i class="bi bi-star-fill text-warning fs-5"></i>
+                    <i class="bi bi-star text-warning fs-5"></i>
+                    <i class="bi bi-star text-warning fs-5"></i>
+                    <i class="bi bi-star text-warning fs-5"></i>
+                    <i class="bi bi-star text-warning fs-5"></i>
+                    01
+                </span>
 
+            </div>
+        </div>
+        <!-- review summary end --> 
+
+
+        <!-- comments section -->
+        <div class="d-flex flex-column comments">
+            <div class="comment-container d-flex flex-column" *ngFor="let comment of comments$ | async">
+                <div class="d-flex flex-row gap-3 align-items-center">
+                    <img [src]="comment.profileImage" alt="">
+                    <div class="d-flex flex-column gap-1">
+                        <span>{{comment.fullName}}</span>
+                        <!-- rating stars written by ngfor  -->
+                        <div class=" position-relative ">
+                            <div class="d-flex flex-row gap-1 fs-5 position-absolute">
+                                <ng-container *ngFor="let s of [].constructor(5)"><i class="bi bi-star"></i></ng-container>
+                            </div>
+                            <div class="d-flex flex-row gap-1 fs-5 position-absolute">
+                                <ng-container *ngFor="let s of [].constructor(comment.score) "><i class="bi bi-star-fill text-warning"></i></ng-container>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <p class="text-secondary-emphasis mt-3 lh-lg">
+                    {{comment.comment}}
+                </p>
+               
+            </div>
+        </div>
     </div>
-    <div class="col-12 col-md-6 d-flex flex-column order-1 order-md-2">
+    <div class="col-12 col-md-6 d-flex flex-column order-1 order-md-2 my-3">
         <h1 class="fw-bolder fs-3">Add a Review</h1>
         <div class="rating">
 
@@ -17,7 +100,7 @@
                         <i class="bi bi-star"></i>
                         <i class="bi bi-star"></i>
                     </div>
-                    <div class="stars-filled" #stars >
+                    <div class="stars-filled" #stars>
                         <i class="bi bi-star-fill opacity-0" (click)="giveStar(1)"></i>
                         <i class="bi bi-star-fill opacity-0" (click)="giveStar(2)"></i>
                         <i class="bi bi-star-fill opacity-0" (click)="giveStar(3)"></i>
@@ -26,24 +109,29 @@
                     </div>
                 </div>
             </div>
-            <form (ngSubmit)="onSubmit(reviewForm) "#reviewForm="ngForm" class="mt-5 d-flex flex-column gap-4">
+            <form (ngSubmit)="onSubmit(reviewForm) " #reviewForm="ngForm" class="mt-5 d-flex flex-column gap-4">
                 <input type="text" name="fullName" #fullName="ngModel" placeholder="Your Full Name" ngModel required>
                 <small class="alert alert-danger" *ngIf="fullName.invalid && fullName.touched">required</small>
 
-                <input type="text" name="emailAdress" #emailAdress="ngModel" placeholder="Email Adress" ngModel required email>
-                <small class="alert alert-danger" *ngIf="emailAdress.invalid && emailAdress.touched">Incorrect Email Adress</small>
+                <input type="text" name="emailAdress" #emailAdress="ngModel" placeholder="Email Adress" ngModel required
+                    email>
+                <small class="alert alert-danger" *ngIf="emailAdress.invalid && emailAdress.touched">Incorrect Email
+                    Adress</small>
 
-                <input type="text" name="phoneNumber" placeholder="Phone Number" ngModel required [pattern]="phoneNumPat" #phoneNumber="ngModel">
-                <small class="alert alert-danger" *ngIf="phoneNumber.invalid && phoneNumber.touched">Incorrect phone number</small>
+                <input type="text" name="phoneNumber" placeholder="Phone Number" ngModel required
+                    [pattern]="phoneNumPat" #phoneNumber="ngModel">
+                <small class="alert alert-danger" *ngIf="phoneNumber.invalid && phoneNumber.touched">Incorrect phone
+                    number</small>
 
-                <textarea name="review" id="review" cols="30" rows="2" placeholder="Your Review" #review="ngModel" ngModel required minlength="25"></textarea>
-                <small class="alert alert-danger"*ngIf="review.invalid && review.touched" >Minimum 25 characters</small>
+                <textarea name="review" id="review" cols="30" rows="2" placeholder="Your Review" #review="ngModel"
+                    ngModel required minlength="25"></textarea>
+                <small class="alert alert-danger" *ngIf="review.invalid && review.touched">Minimum 25 characters</small>
 
                 <button type="submit" class="btn_3 w-50 ms-auto" [disabled]="!reviewForm.valid">submit now</button>
             </form>
-               
 
-                
+
+
         </div>
     </div>
 
