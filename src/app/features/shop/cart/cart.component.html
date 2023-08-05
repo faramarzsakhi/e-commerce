@@ -1,0 +1,39 @@
+<app-bread-crumb></app-bread-crumb>
+<div class="container mt-5">
+    <table class="mx-auto col-12 col-md-8 table align-middle ">
+        <thead>
+            <tr>
+                <th class="col-md-8 text-black-50">
+                    Product
+                </th>
+                <th class="col text-black-50">
+                    price
+                </th>
+                <th class="col text-black-50">
+                    Quantity
+                </th>
+                <th class="col text-black-50">
+                    Total
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of products">
+                <td class="d-flex flex-column flex-md-row align-items-md-center gap-md-4 py-3 px-2">
+                    <img [src]="p.imagesArray[0]" alt="cart products thumbnail" class="img-thumbnail">
+
+                    <p>{{p.intro}}</p>
+                </td>
+                <td>
+                    <span> ${{p.price | number}}</span>
+                </td>
+                <td>
+                    <input type="number" [(ngModel)]="p.quantity" class="w-50 text-center" min="1" max="100">
+                </td>
+                <td class="fw-bold">
+                    ${{p.price * p.quantity | number}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -8,6 +8,7 @@ import { ProductComponent } from './product/product.component';
 import { RouterModule } from '@angular/router';
 import { ImageGalleryComponent } from './image-gallery/image-gallery.component';
 import { CommentsSectionComponent } from './comments-section/comments-section.component';
+import { CartComponent } from './cart/cart.component';
 
 
 
@@ -18,6 +19,7 @@ import { CommentsSectionComponent } from './comments-section/comments-section.co
         ProductComponent,
         ImageGalleryComponent,
         CommentsSectionComponent,
+        CartComponent,
     ],
     imports: [
         CommonModule,

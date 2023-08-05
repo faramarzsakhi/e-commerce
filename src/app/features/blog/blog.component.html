@@ -1,0 +1,34 @@
+<app-bread-crumb></app-bread-crumb>
+<div class="container-fluid row mt-5">
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white col-12 col-md-3 col-lg-4">
+        <a class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
+            <span class="fs-5 fw-semibold">Titles List</span>
+        </a>
+        <div class="list-group list-group-flush border-bottom scrollarea">
+            <ng-container *ngFor="let c of content">
+                <a (click)="activate(c.Title)" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true" [ngClass]="{'active': c.Title == active}">
+                    <div class="d-flex w-100 align-items-center justify-content-between">
+                        <strong class="mb-1 fs-5">{{c.Title}}</strong>
+                        <small class="fw-bold">{{c.date}}</small>
+                    </div>
+                    <div class="col-10 mb-1 ">{{c.intro}}</div>
+                </a>
+            </ng-container>
+        </div>
+            
+        
+          
+    </div>
+    <div class="col-12 col-md-9 col-lg-8">
+        <ng-container *ngFor="let t of content">
+            <ng-container *ngIf="t.Title == active">
+                <H1>{{t.mainHeading}}</H1>
+                <p class="p-4">
+                    {{t.paragraphs}}
+                </p>
+            </ng-container>
+        </ng-container>
+ 
+        
+    </div>
+</div>

@@ -14,7 +14,7 @@
 
     <!-- scrollable -->
     <div class="scrollable-row w-100" #list>
-        <div class="item" *ngFor="let item of items">
+        <div class="item" *ngFor="let item of items" [routerLink]="['/product']" >
             <img [src]="item" alt="chair" class="img-fluid">
             <div class="details">
                 <h3>Lorem ipsum</h3>

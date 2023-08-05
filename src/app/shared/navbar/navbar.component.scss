@@ -95,6 +95,27 @@
   animation:disappear 300ms ease-out forwards;
   display:none;
 }
+.cart{
+  position: relative;
+  .cart_quantity{
+    position: absolute;
+    top: calc(0% - 2px);
+    right: calc(0% - 6px);
+    transform: translate(50%, -50%);
+    width: 15px !important;
+    height: 15px !important;
+    background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(255,140,140,1) 100%);
+    color: white;
+    font-size: 14px;
+    border-radius: 100%;
+    border:1px solid white;
+    display: flex;
+    align-items:center;
+    padding: 10px;
+    justify-content: center;
+  }
+}
+
 @keyframes appear {
   0% {
     opacity: 0;

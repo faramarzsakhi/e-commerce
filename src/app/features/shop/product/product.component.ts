@@ -1,4 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { ProductInterface } from 'src/app/common/models/product/product_interface';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-product',
@@ -6,14 +8,25 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent {
+  constructor(private _cart:CartService){}
   productCount:number=0;
   activeTab:string="description";
- imagesArray:Array<string>=[
-    "assets/img/product/single-product/product_1.png",
-    "assets/img/product/product_2.png",
-    "assets/img/product/product_3.png",
-    "assets/img/product/product_4.png",
-  ]
+  cartMessage:boolean;
+ 
+  product:ProductInterface={
+    title:"Faded SkyBlu Denim Jeans",
+    price:149,
+    category:"household",
+    isAvailable:true,
+    intro:"First replenish living. Creepeth image image. Creeping can't, won't called. Two fruitful let days signs sea together all land fly subdue",
+    quantity:0,
+    imagesArray:[
+      "assets/img/product/single-product/product_1.png",
+      "assets/img/product/product_2.png",
+      "assets/img/product/product_3.png",
+      "assets/img/product/product_4.png",
+    ]
+  };
   // functions
   addCount():void{
     if(this.productCount<100){
@@ -26,7 +39,17 @@ export class ProductComponent {
     }
   }
 
-  
+  addToCart():void{
+    this.product.quantity=this.productCount;
+    this._cart.addToCart(this.product);
+    this.product.quantity=0;
+    this.productCount=0;
+    this.cartMessage=true;
+    setTimeout(() => {
+      this.cartMessage=false;
+    }, 2000);
+    
+  }
 
   likeHover(elem:HTMLElement){
     elem.classList.add('like_hover');
@@ -41,7 +64,7 @@ export class ProductComponent {
 
   }
    ngAfterViewInit(){
-    window.scroll(0,600);
+    window.scroll(0,600); 
    }
     
 

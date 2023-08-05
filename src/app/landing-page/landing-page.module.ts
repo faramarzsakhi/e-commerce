@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { SlidingListComponent } from './sliding-list/sliding-list.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -13,7 +14,8 @@ import { SlidingListComponent } from './sliding-list/sliding-list.component';
     SlidingListComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports:[
 
