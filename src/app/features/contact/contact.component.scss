@@ -1,0 +1,37 @@
+.map{
+    margin-top: 100px ;
+}
+.get_in_touch{
+    input,textarea{
+        padding: 10px;
+        border: 1px solid rgb(207, 207, 207);
+
+    }
+}
+input.ng-invalid.ng-touched,textarea.ng-invalid.ng-touched{
+    border:2px solid red !important;
+    box-shadow: 0px 0px 9px 2px rgba(246,0,0,0.21);
+}
+.btn_3 {
+    width: 200px;
+    margin: 20px 5px;
+    display: inline-block;
+    padding: 9px 30px;
+    border-radius: 50px;
+    background-color: #ff3368;
+    border: 1px solid #ecfdff;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    box-shadow: -1.717px 8.835px 29.76px 2.24px rgba(255, 51, 104, 0.18);
+    border: 1px solid #ff3368;
+    transition: 0.5s;
+    text-decoration: none;
+    &:hover {
+      border: 1px solid #ff3368;
+      background-color: red;
+      cursor: pointer;
+    }
+  }

@@ -1,4 +1,48 @@
 <app-bread-crumb></app-bread-crumb>
-
+<div class="map container d-flex flex-column align-items-center justify-content-center">
+    <h1 class="fs-2 fw-bold text-secondary p-3">
+        Our location
+    </h1>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9914410252904!2d2.2919063760192895!3d48.8583736007083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sEiffel%20Tower!5e0!3m2!1sen!2s!4v1691249842875!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-100"></iframe>
+</div>
+<div class="container mt-5">
+    <div class="row mx-md-5">
+        <div class="col-12 col-md-7 col-lg-8 p-2">
+            <form class="get_in_touch d-flex flex-column" (ngSubmit)="onSubmit(messageToUs)" #messageToUs="ngForm">
+                <div class="h2 my-3">Get in touch</div>
+                <textarea name="messageToUs" id="messageToUs" cols="30" name="theMessage" rows="10" class="border-secondary-subtle p-2" placeholder="Enter Message" minlength="20"></textarea>
+                <div class="d-flex gap-3 my-3 justify-content-between">
+                    <input class="w-100" type="text" placeholder="Enter your name"  ngModel name="fullName">
+                    <input class="w-100" type="text" placeholder="Enter your email adress" ngModel name="emailAdress" email>
+                </div>
+                <input type="text" name="subject" class="" placeholder="Enter subject" ngModel>
+                <button type="submit" class="btn_3" >send message</button>
+            </form>
+        </div>
+        <div class="col-12 col-md-5 col-lg-4 d-flex flex-column gap-3">
+            <div class="d-flex align-items-center py-2 px-5 mb-1 mt-5">
+                <i class="bi bi-geo-fill fs-3 text-secondary"></i>
+                <div class="d-flex flex-column p-3 text-secondary">
+                    <SPAN>Buttonwood, California</SPAN>
+                    <span>Rosemead, CA 91770</span>
+                </div>
+            </div>
+            <div class="d-flex align-items-center py-2 px-5 mb-1">
+                <i class="bi bi-phone fs-3 text-secondary"></i>
+                <div class="d-flex flex-column p-3 text-secondary">
+                    <SPAN>00 (93) 903 237 4679</SPAN>
+                    <span>Mon to Fri 9am to 6pm</span>
+                </div>
+            </div>
+            <div class="d-flex align-items-center py-2 px-5 mb-1">
+                <i class="bi bi-envelope fs-3 text-secondary"></i>
+                <div class="d-flex flex-column p-3 text-secondary">
+                    <SPAN>faramarzsakhi@yahoo.com</SPAN>
+                    <span>Send me your query anytime!</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
