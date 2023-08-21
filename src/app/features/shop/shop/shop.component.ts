@@ -7,8 +7,8 @@ import { ItemAxis } from 'src/app/common/models/itemsAxis';
   styleUrls: ['./shop.component.scss']
 })
 export class ShopComponent {
-  minPrice: number = 0;
-  maxPrice: number = 10000;
+  minPrice = 0;
+  maxPrice = 10000;
   axisArray: Array<ItemAxis> = [];
   winY = 0;
   windowWidth = window.innerWidth;
@@ -21,7 +21,7 @@ export class ShopComponent {
   ngAfterViewInit() {
 
     // observer threshold
-    let options = {
+    const options = {
       root: null,
       rootMargin: "0px",
       threshold: 1,

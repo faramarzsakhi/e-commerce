@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ShopModule } from 'src/app/features/shop/shop.module';
 import { Observable } from 'rxjs';
 import { CommentInterface } from 'src/app/common/models/comment/comment_interface';
 

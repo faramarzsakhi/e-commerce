@@ -38,7 +38,7 @@
             </div>
 
             <form class="d-flex mx-2 gap-4 fw-bold fs-5">
-                <i class="bi bi-search" role="button" (click)="toggleSearch()"></i>
+                <i class="bi bi-search" role="button" (click)="toggleSearch()" (keydown)="toggleSearch()" tabindex="0" role="button"></i>
                 <i class="bi bi-heart"></i>
                 <div class="cart " [routerLink]="['/cart']" >
                     <i class="bi bi-cart-plus-fill"></i>
@@ -54,7 +54,7 @@
     'search-imvisible':!isSearchVisible}">
        <div class="searchbar container" >
         <input type="text" placeholder="Search Here" class="search-input">
-        <i class="bi bi-x fs-4 text-white search-cross" role="button" (click)="toggleSearch()"  ></i>
+        <i class="bi bi-x fs-4 text-white search-cross" role="button" (click)="toggleSearch()" (keydown)="toggleSearch()" tabindex="0"   ></i>
        </div>
     </div>
 </div>

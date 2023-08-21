@@ -14,7 +14,6 @@ export class CartService {
   price:360,
   quantity:2
  }];
-  constructor() { }
   addToCart(product:ProductInterface){
     this.cartProducts.push(product);
   }

@@ -1,11 +1,11 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.scss']
 })
-export class LandingPageComponent {
+export class LandingPageComponent implements OnInit {
 @ViewChild('days')daysh:ElementRef = {} as ElementRef;
 @ViewChild('hours')hoursh:ElementRef = {} as ElementRef;
 @ViewChild('minutes')minutesh:ElementRef = {} as ElementRef;
@@ -15,20 +15,20 @@ export class LandingPageComponent {
 
 
 ngOnInit(){
- let  countDownDate= new Date("Jan 5, 2024 15:37:25").getTime();
-  let x = setInterval(()=> {
+ const  countDownDate= new Date("Jan 5, 2024 15:37:25").getTime();
+  const x = setInterval(()=> {
 
     // Get today's date and time
-   let now:number = new Date().getTime();
+   const now:number = new Date().getTime();
   
     // Find the distance between now and the count down date
-    var distance:number = countDownDate - now;
+    const distance:number = countDownDate - now;
   
     // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
   
     // Display the result in the element with id="demo"
    

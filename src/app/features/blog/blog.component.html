@@ -6,7 +6,7 @@
         </a>
         <div class="list-group list-group-flush border-bottom scrollarea">
             <ng-container *ngFor="let c of content">
-                <a (click)="activate(c.Title)" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true" [ngClass]="{'active': c.Title == active}">
+                <a (click)="activate(c.Title)" class="list-group-item list-group-item-action py-3 lh-tight" [ngClass]="{'active': c.Title === active}" role="button">
                     <div class="d-flex w-100 align-items-center justify-content-between">
                         <strong class="mb-1 fs-5">{{c.Title}}</strong>
                         <small class="fw-bold">{{c.date}}</small>
@@ -21,7 +21,7 @@
     </div>
     <div class="col-12 col-md-9 col-lg-8">
         <ng-container *ngFor="let t of content">
-            <ng-container *ngIf="t.Title == active">
+            <ng-container *ngIf="t.Title === active">
                 <H1>{{t.mainHeading}}</H1>
                 <p class="p-4">
                     {{t.paragraphs}}

@@ -101,15 +101,15 @@
                         <i class="bi bi-star"></i>
                     </div>
                     <div class="stars-filled" #stars>
-                        <i class="bi bi-star-fill opacity-0" (click)="giveStar(1)"></i>
-                        <i class="bi bi-star-fill opacity-0" (click)="giveStar(2)"></i>
-                        <i class="bi bi-star-fill opacity-0" (click)="giveStar(3)"></i>
-                        <i class="bi bi-star-fill opacity-0" (click)="giveStar(4)"></i>
-                        <i class="bi bi-star-fill opacity-0" (click)="giveStar(5)"></i>
+                        <i class="bi bi-star-fill opacity-0" (click)="giveStar(1)" role="button"></i>
+                        <i class="bi bi-star-fill opacity-0" (click)="giveStar(2)" role="button"></i>
+                        <i class="bi bi-star-fill opacity-0" (click)="giveStar(3)" role="button"></i>
+                        <i class="bi bi-star-fill opacity-0" (click)="giveStar(4)" role="button"></i>
+                        <i class="bi bi-star-fill opacity-0" (click)="giveStar(5)" role="button"></i>
                     </div>
                 </div>
             </div>
-            <form (ngSubmit)="onSubmit(reviewForm) " #reviewForm="ngForm" class="mt-5 d-flex flex-column gap-4">
+            <form (ngSubmit)="onSubmit(reviewForm)" #reviewForm="ngForm" class="mt-5 d-flex flex-column gap-4">
                 <input type="text" name="fullName" #fullName="ngModel" placeholder="Your Full Name" ngModel required>
                 <small class="alert alert-danger" *ngIf="fullName.invalid && fullName.touched">required</small>
 

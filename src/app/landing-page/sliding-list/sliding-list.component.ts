@@ -10,7 +10,7 @@ export class SlidingListComponent {
 
 
   scrollLeft(elem: HTMLDivElement) {
-    let scrollable = elem.scrollWidth/2;
+    const scrollable = elem.scrollWidth/2;
     elem.scrollLeft += scrollable / 2;
     // console.log(scrollable , "scrollable");
     // console.log(elem.scrollLeft , "scroll Left");
@@ -19,7 +19,7 @@ export class SlidingListComponent {
 
   }
   scrollRight(elem: HTMLDivElement) {
-    let scrollable = elem.scrollWidth/2;
+    const scrollable = elem.scrollWidth/2;
     elem.scrollLeft -= scrollable / 4.1;
     // console.log(scrollable , "scrollable");
     // console.log(elem.scrollLeft , "scroll Left");

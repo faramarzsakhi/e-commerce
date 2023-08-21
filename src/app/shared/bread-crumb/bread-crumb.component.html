@@ -4,7 +4,7 @@
         <nav aria-label="breadcrumb d-flex flex-column">
             <h1 class="fw-bold">{{bread}}</h1>
             <ol class="breadcrumb">
-              <li class="breadcrumb-item " [ngClass]="{'active': bread == 'home'}" aria-current="page">Home</li>
+              <li class="breadcrumb-item " [ngClass]="{'active': bread === 'home'}" aria-current="page">Home</li>
               <li class="breadcrumb-item "[ngClass]="{'active': bread !== 'home'}" *ngIf="bread !== 'home'"aria-current="page">{{bread}}</li>
             </ol>
             

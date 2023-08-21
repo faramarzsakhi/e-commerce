@@ -1,14 +1,14 @@
-import { Component, Input } from '@angular/core';
+import { AfterContentInit, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-image-gallery',
   templateUrl: './image-gallery.component.html',
   styleUrls: ['./image-gallery.component.scss']
 })
-export class ImageGalleryComponent {
+export class ImageGalleryComponent implements AfterContentInit{
   @Input()imagesArray:Array<string>=[];
-  activeImage:string="";
-  animating:boolean=false;
+  activeImage="";
+  animating=false;
  
 
   onThumbClick(index:number){

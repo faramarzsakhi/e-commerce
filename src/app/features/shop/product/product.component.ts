@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component} from '@angular/core';
 import { ProductInterface } from 'src/app/common/models/product/product_interface';
 import { CartService } from 'src/app/services/cart.service';
 
@@ -7,10 +7,10 @@ import { CartService } from 'src/app/services/cart.service';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss']
 })
-export class ProductComponent {
+export class ProductComponent  implements AfterViewInit{
   constructor(private _cart:CartService){}
-  productCount:number=0;
-  activeTab:string="description";
+  productCount=0;
+  activeTab="description";
   cartMessage:boolean;
  
   product:ProductInterface={

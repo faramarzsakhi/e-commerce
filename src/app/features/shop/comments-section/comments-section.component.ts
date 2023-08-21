@@ -35,7 +35,7 @@ export class CommentsSectionComponent {
     })
   }
   onSubmit(form: NgForm) {
-    alert("successfully submitied");
+    console.log(form.value);
 
   }
  

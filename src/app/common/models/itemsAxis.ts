@@ -1,6 +1,6 @@
 import { ElementRef } from "@angular/core";
 
 export class ItemAxis{
-    axisY:number=0;
+    axisY=0;
     elem:ElementRef;
 }
